@@ -1,0 +1,24 @@
+{
+  "description": "Example that reproduces SystemJS Build Tool 0.14.11 issue, when js module is imported from jsx module.",
+  "jspm": {
+    "dependencies": {
+      "react": "npm:react@^0.14.3",
+      "react-dom": "npm:react-dom@^0.14.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "jspm": "^0.16.15",
+    "node-static": "^0.7.7"
+  },
+  "scripts": {
+    "start": "static --port 9001 -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\"",
+    "prod": "static --port 9009 -H \"{\\\"Cache-Control\\\": \\\"no-cache, must-revalidate\\\"}\" ./prod",
+    "build": "jspm bundle-sfx test-app ./prod/bundle.js",
+    "postinstall": "jspm install"
+  }
+}

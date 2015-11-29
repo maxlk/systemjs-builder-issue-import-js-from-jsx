@@ -1,7 +1,7 @@
 Builder drops file extension when js module is imported from jsx module.
 ===
 
-This project illustrates **SystemJS Build Tool 0.14.11** issue.
+This project illustrates **SystemJS Build Tool 0.14.11** [issue #413](https://github.com/systemjs/builder/issues/413).
 
 There is a package `test-app` that sits in `lib` folder and consists of two modules `main.jsx` and `module.js`. Module `module.js` is imported into `main.jsx` module. In development mode (files are loaded separately to browser) SystemJS loads both modules as expected with correct extensions.
 
